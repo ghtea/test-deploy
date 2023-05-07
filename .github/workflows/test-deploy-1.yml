@@ -15,7 +15,8 @@ env:
   AWS_ECR_REPO: test-deploy-1
   TASK_DEFINITION: infra/task-definitions/test-deploy-1.latest.json
   CONTAINER_NAME: test-deploy-1
-  CLUSTER: test-deploy-1
+  CLUSTER_NAME: test-deploy-1
+  SERVICE_NAME: test-deploy-1
 
 jobs:
   build:
@@ -58,6 +59,6 @@ jobs:
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
         with:
           task-definition: ${{ steps.task-def.outputs.task-definition }}
-          service: web-nodejs
-          cluster: ${{ env.CLUSTER }}
+          service: ${{ env.SERVICE_NAME }}
+          cluster: ${{ env.CLUSTER_NAME }}
           wait-for-service-stability: true
