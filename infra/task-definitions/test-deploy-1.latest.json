@@ -1,0 +1,83 @@
+{
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "containerDefinitions": [
+    {
+      "cpu": 0,
+      "environment": [],
+      "environmentFiles": [],
+      "essential": true,
+      "image": "519327379961.dkr.ecr.ap-northeast-2.amazonaws.com/test-deploy-1:1e191321efa94cbcb4d82c22d8ac18e23799c80d",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-create-group": "true",
+          "awslogs-group": "/ecs/test-deploy-1",
+          "awslogs-region": "ap-northeast-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "mountPoints": [],
+      "name": "test-deploy-1",
+      "portMappings": [
+        {
+          "appProtocol": "http",
+          "containerPort": 80,
+          "hostPort": 80,
+          "name": "test-deploy-1-80-tcp",
+          "protocol": "tcp"
+        }
+      ],
+      "ulimits": [],
+      "volumesFrom": []
+    }
+  ],
+  "cpu": "1024",
+  "executionRoleArn": "arn:aws:iam::519327379961:role/ecsTaskExecutionRole",
+  "family": "test-deploy-1",
+  "memory": "3072",
+  "networkMode": "awsvpc",
+  "placementConstraints": [],
+  "registeredAt": "2023-05-07T02:30:59.052Z",
+  "registeredBy": "arn:aws:iam::519327379961:root",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "revision": 1,
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "status": "ACTIVE",
+  "tags": [],
+  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:519327379961:task-definition/test-deploy-1:1",
+  "volumes": []
+}
