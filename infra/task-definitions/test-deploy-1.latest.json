@@ -19,7 +19,7 @@
       "portMappings": [
         {
           "appProtocol": "http",
-          "containerPort": 80,
+          "containerPort": 3000,
           "hostPort": 80,
           "name": "test-deploy-1-80-tcp",
           "protocol": "tcp"
