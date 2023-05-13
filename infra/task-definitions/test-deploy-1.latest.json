@@ -5,7 +5,6 @@
       "environment": [],
       "environmentFiles": [],
       "essential": true,
-      "image": "519327379961.dkr.ecr.ap-northeast-2.amazonaws.com/test-deploy-1:1e191321efa94cbcb4d82c22d8ac18e23799c80d",
       "logConfiguration": {
         "logDriver": "awslogs",
         "options": {
