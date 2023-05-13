@@ -1,8 +1,4 @@
 {
-  "compatibilities": [
-    "EC2",
-    "FARGATE"
-  ],
   "containerDefinitions": [
     {
       "cpu": 0,
@@ -40,44 +36,13 @@
   "memory": "3072",
   "networkMode": "awsvpc",
   "placementConstraints": [],
-  "registeredAt": "2023-05-07T02:30:59.052Z",
-  "registeredBy": "arn:aws:iam::519327379961:root",
-  "requiresAttributes": [
-    {
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "name": "ecs.capability.execution-role-awslogs"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.ecr-auth"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    },
-    {
-      "name": "ecs.capability.execution-role-ecr-pull"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "name": "ecs.capability.task-eni"
-    },
-    {
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-    }
-  ],
   "requiresCompatibilities": [
     "FARGATE"
   ],
-  "revision": 1,
   "runtimePlatform": {
     "cpuArchitecture": "X86_64",
     "operatingSystemFamily": "LINUX"
   },
-  "status": "ACTIVE",
   "tags": [],
-  "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:519327379961:task-definition/test-deploy-1:1",
   "volumes": []
 }
